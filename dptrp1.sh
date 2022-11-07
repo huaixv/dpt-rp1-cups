@@ -56,7 +56,9 @@ function copy_original_or_not() {
 case ${#} in
     0)
         # this case is for "backend discovery mode"
-        echo "DPT-RP1 Printer \"Backend to print directly to DPT-RP1\""
+        # output should be in this form
+        #   class URI "make model" "name" ["1284 device ID"] ["location"]
+        echo "DPT-RP1-Printer dptrp1://0.0.0.0 \"DPT-RP1-Printer\" \"DPT-RP1-Printer\" [\"000000000000000\"] [\"DPT-RP1-Printer\"]"
         exit 0
         ;;
     5)
