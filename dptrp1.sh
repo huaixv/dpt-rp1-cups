@@ -65,7 +65,7 @@ case ${#} in
         # backend needs to read from stdin if number of arguments is 5
         cat - > ${outname}
 
-        dptrp1 --addr=${DEVICEADDR} \
+        ${dptrp1path} --addr=${DEVICEADDR} \
             --client=${DPT_ID} \
             --key=${DPT_KEY} \
             upload ${outname} Document/Printed/
